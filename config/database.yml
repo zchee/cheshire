@@ -16,10 +16,12 @@
 #
 default: &default
   adapter: postgresql
+  host:     192.168.55.33
+  username: postgres
+  password: mysecretpassword
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  timeout: 5000
 
 development:
   <<: *default
