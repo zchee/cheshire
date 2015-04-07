@@ -52,6 +52,7 @@ gem 'zocial-rails'
 
 # Helpers
 gem 'bcrypt'
+gem 'friendly_id'
 gem 'high_voltage'
 gem 'parallel'
 
@@ -84,7 +85,7 @@ gem 'peek-rblineprof'
 gem 'peek-redis'
 gem 'peek-sidekiq'
 gem 'pygments.rb', :require => false
-gem 'skylight'
+# gem 'skylight'
 
 group :development do
   gem 'awesome_print'
