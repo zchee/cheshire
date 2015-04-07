@@ -9,8 +9,9 @@ class User < ActiveRecord::Base
   # validates :password, length: { minimum: 6 }
 
   # http://ruby-rails.hatenadiary.com/entry/20150221/1424489524
+  # https://github.com/norman/friendly_id#what-changed-in-version-50
   include FriendlyId
-  friendly_id :github_login, use: [:slugged, :history]
+  friendly_id :github_login, use: [:slugged, :finders]
 
 
   def should_generate_new_friendly_id?
