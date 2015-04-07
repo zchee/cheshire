@@ -30,13 +30,13 @@ ActiveRecord::Schema.define(version: 20150407162053) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "github_login"
-    t.string   "image"
-    t.string   "access_token"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string "name"
+    t.string "email"
+    t.string "github_login"
+    t.string "image"
+    t.string "access_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "slug"
   end
 
