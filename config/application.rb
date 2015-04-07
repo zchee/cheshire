@@ -31,5 +31,11 @@ module Cheshire
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.web_console.whitelisted_ips          = '192.168.55.1'
+    config.browserify_rails.commandline_options = ['-t reactify']
+    config.sass.load_paths << "#{Rails.root}/node_modules/material-ui-sass/"
+    config.assets.paths << "#{Rails.root}/node_modules/material-ui-sass/"
+
   end
 end
