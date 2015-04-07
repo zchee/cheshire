@@ -1,0 +1,1 @@
+FROM zchee/rubymine:nightly

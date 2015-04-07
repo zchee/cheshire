@@ -1,0 +1,31 @@
+{
+  "name": "Cheshire",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "description": "== README",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zchee/cheshire.git"
+  },
+  "author": "zchee <zcheeee@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/zchee/cheshire/issues"
+  },
+  "homepage": "https://github.com/zchee/cheshire",
+  "devDependencies": {
+    "browserify": "~> 6.3",
+    "browserify-incremental": "^1.5.0",
+    "reactify": "^0.17.1"
+  },
+  "dependencies": {
+    "material-ui": "^0.5.0",
+    "material-ui-sass": "^0.7.2",
+    "react": "^0.12.2"
+  }
+}
