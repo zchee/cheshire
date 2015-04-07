@@ -51,6 +51,7 @@ gem 'kaminari'
 gem 'zocial-rails'
 
 # Helpers
+gem 'bcrypt'
 gem 'high_voltage'
 gem 'parallel'
 
