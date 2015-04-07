@@ -7,4 +7,13 @@ class User < ActiveRecord::Base
   validates :access_token, presence: true
   # has_secure_password
   # validates :password, length: { minimum: 6 }
+
+  # http://ruby-rails.hatenadiary.com/entry/20150221/1424489524
+  include FriendlyId
+  friendly_id :github_login, use: [:slugged, :history]
+
+
+  def should_generate_new_friendly_id?
+    name_changed?
+  end
 end
