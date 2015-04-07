@@ -1,45 +1,139 @@
 source 'https://rubygems.org'
+ruby '2.2.1'
 
+gem 'rails'
+gem 'responders'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
-# Use postgresql as the database for Active Record
+# Server
+gem 'puma'
+gem 'unicorn-rails'
+
+# Database
 gem 'pg'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# KVS
+gem 'hiredis'
+gem 'moneta'
+gem 'redis', require: %w(redis redis/connection/hiredis)
+gem 'redis-namespace'
+gem 'redis-objects', require: 'redis/objects'
+gem 'redis-rack-cache'
+gem 'redis-rails'
+gem 'redis-session-store'
+
+# APIs
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'octokit'
+gem 'github_api'
+gem 'pusher'
+
+# Assets
+gem 'browserify-rails', '~> 0.5'
+gem 'coffee-rails'
+gem 'hamlit'
+gem 'jade-rails'
+gem 'jbuilder'
+gem 'react-rails', github: 'reactjs/react-rails'
+gem 'sass-rails'
+gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'uglifier'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# Models
+gem 'active_hash'
+gem 'paper_trail', '~> 4.0.0.beta2'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+# Views
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem 'kaminari'
+gem 'zocial-rails'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Helpers
+gem 'high_voltage'
+gem 'parallel'
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+# Middleware
+gem 'faraday-http-cache'
+gem 'faraday-lazyable'
+gem 'faraday_api_cache'
+gem 'typhoeus', require: 'typhoeus/adapters/faraday'
 
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+# Data serialize
+gem 'msgpack'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+# Background
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
+
+# Performance
+gem 'bugsnag'
+gem 'newrelic-faraday'
+gem 'newrelic-redis'
+gem 'newrelic_rpm'
+gem 'peek'
+gem 'peek-faraday'
+gem 'peek-gc'
+gem 'peek-git'
+gem 'peek-performance_bar'
+gem 'peek-pg'
+gem 'peek-rblineprof'
+gem 'peek-redis'
+gem 'peek-sidekiq'
+gem 'pygments.rb', :require => false
+gem 'skylight'
+
+group :development do
+  gem 'awesome_print'
+  gem 'annotate'
+  gem 'better_errors'
+  gem 'binding_of_caller', '>= 0.7.3.pre1'
+  gem 'brakeman', :require => false
+  gem 'bullet'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rails-console'
+  gem 'debase', '>= 0.1.3.beta1'
+  gem 'did_you_mean'
+  gem 'dotenv-rails'
+  gem 'meta_request'
+  gem 'pry-rails'
+  gem 'quiet_assets'
+  gem 'rack-mini-profiler'
+  gem 'rails-footnotes'
+  gem 'rails_layout'
+  gem 'rubocop', require: false
+  gem 'ruby-debug-ide'
+  gem 'tapp'
+  gem 'view_source_map'
 end
 
+group :development, :test do
+  gem 'byebug', require: !ENV['RM_INFO']
+  gem 'byebug-color-printer'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'launchy'
+  gem 'parallel_tests'
+  gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'web-console'
+end
+
+group :test do
+  gem 'json_spec'
+  gem 'rspec-sidekiq'
+  gem 'fakeredis', require: 'fakeredis/rspec'
+  gem 'selenium-webdriver'
+end
+
+group :production do
+
+end
