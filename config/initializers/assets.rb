@@ -10,5 +10,5 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-config.sass.load_paths << "#{Rails.root}/node_modules/material-ui-sass/"
-config.assets.paths << "#{Rails.root}/node_modules/material-ui-sass/"
+Rails.application.config.sass.load_paths << "#{Rails.root}/node_modules/material-ui-sass/"
+Rails.application.config.assets.paths << "#{Rails.root}/node_modules/material-ui-sass/"
