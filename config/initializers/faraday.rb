@@ -8,7 +8,7 @@ HYDRA                 = Typhoeus::Hydra.new(:max_concurrency => 10)
 
 stack = Faraday::RackBuilder.new do |builder|
   # builder.request :api_cache
-  builder.response :logger
+  # builder.response :logger
   builder.use Faraday::HttpCache, store: Rails.cache
   builder.use Octokit::Response::RaiseError
   builder.adapter :typhoeus
