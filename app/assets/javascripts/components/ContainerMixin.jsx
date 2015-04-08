@@ -12,7 +12,7 @@ var DRAG_DROP_CONTENT_TYPE = "custom_container_type"
 
 var toggleSelectedItem = function (selectedIndex) {
     return this.state.selected.has(selectedIndex) ? this.state.selected.delete(selectedIndex) : this.state.selected.add(selectedIndex);
-  }
+    }
   , correctSelectedIndicesAfterAddingItems = function (droppedItems) {
     if (this.state.activeDropZone !== NONE_ACTIVE) {
       // need to bump selected pointers to point account for data added by onDrop

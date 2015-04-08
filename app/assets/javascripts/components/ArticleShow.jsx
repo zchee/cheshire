@@ -65,12 +65,9 @@ var Article = React.createClass({
     return (
       <div>
         <h1>{this.props.headline}: </h1>
-
         <h2>{this.props.subheadline}</h2>
         <MainImage image={this.props.images[0]}/>
-
         <h3>By: {this.props.contributors}</h3>
-
         <h3>Date: {this.props.date}</h3>
         <ImageFilledText text={this.props.body} images={this.props.images.slice(1)}/>
       </div>

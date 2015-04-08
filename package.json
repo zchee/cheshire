@@ -21,10 +21,20 @@
   "devDependencies": {
     "browserify": "~> 6.3",
     "browserify-incremental": "^1.5.0",
-    "material-ui": "^0.5.0",
-    "material-ui-sass": "^0.7.2",
-    "react": "^0.12.2",
-    "reactable": "^0.10.1",
-    "reactify": "^0.17.1"
+    "immutable": "*",
+    "jest-cli": "*",
+    "jquery": "*",
+    "react": "^0.13.1",
+    "react-immutable-render-mixin": "*",
+    "react-intl": "*",
+    "react-tools": "*",
+    "reactify": "^1.1.0",
+    "reflux": "*"
+  },
+  "dependencies": {
+    "material-ui": "^0.7.3",
+    "material-ui-sass": "*",
+    "react-tap-event-plugin": "^0.1.6",
+    "reactable": "*"
   }
 }

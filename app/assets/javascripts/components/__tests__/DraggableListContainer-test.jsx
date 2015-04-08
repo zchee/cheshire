@@ -21,7 +21,6 @@ describe('DraggableListView', function () {
   function getItemFromContainer(container, itemId) {
     return TestUtils.scryRenderedDOMComponentsWithTag(container, 'li')[2 * itemId + 1];
   }
-
   function getDropZone(container, itemId) {
     return TestUtils.scryRenderedDOMComponentsWithTag(container, 'li')[2 * itemId];
   }

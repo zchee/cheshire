@@ -181,9 +181,7 @@ var ArticleForm = React.createClass({
       <form acceptCharset="UTF-8" action={formPath} method="post"
             encType={this.isFormUploadingFiles() ? "multipart/form-data" : "application/x-www-form-urlencoded"}>
         <RailsFormRequirements isCreateForm={isCreateForm}/>
-
         <h1>Article</h1>
-
         <div><a href={"/articles/" + this.props.id}>View</a></div>
         <div>
           <div><input type="hidden" name={this.props.name + '[id]'} value={this.props.id} readOnly/></div>
