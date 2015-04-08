@@ -7,6 +7,7 @@ gem 'responders'
 # Server
 gem 'puma'
 gem 'unicorn-rails'
+gem 'gctools'
 
 # Database
 gem 'pg'
@@ -36,6 +37,7 @@ gem 'jade-rails'
 gem 'jbuilder'
 gem 'react-rails', github: 'reactjs/react-rails'
 gem 'sass-rails'
+gem 'slim-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'uglifier'
@@ -88,8 +90,8 @@ gem 'pygments.rb', :require => false
 # gem 'skylight'
 
 group :development do
-  gem 'awesome_print'
   gem 'annotate'
+  gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller', '>= 0.7.3.pre1'
   gem 'brakeman', :require => false
@@ -106,9 +108,11 @@ group :development do
   gem 'quiet_assets'
   gem 'rack-mini-profiler'
   gem 'rails-footnotes'
+  gem 'rails-perftest'
   gem 'rails_layout'
   gem 'rubocop', require: false
   gem 'ruby-debug-ide'
+  gem 'ruby-prof'
   gem 'tapp'
   gem 'view_source_map'
 end
