@@ -39,6 +39,12 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
+  # http://dave.is/unicorn.html
+  config.logger = Logger.new(STDOUT)
+  config.logger.level = Logger.const_get(
+    ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'DEBUG'
+  )
+
   # http://ruby-rails.hatenadiary.com/entry/20150204/1423055537
   config.after_initialize do
     Bullet.enable  = true
@@ -55,7 +61,10 @@ Rails.application.configure do
     # Bullet.bugsnag      = true
     # Bullet.airbrake     = true
     Bullet.raise        = true
-    Bullet.add_footer   = true
+    # Bullet.add_footer   = true
   end
+
+  config.react.variant = :development
+  config.react.replay_console        = true
 
 end
