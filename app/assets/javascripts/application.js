@@ -12,6 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require peek
+//= require peek/views/faraday
+//= require peek/views/performance_bar
+//= require peek/views/rblineprof
 //= require turbolinks
 //= require components
-//= require_tree .
+// require_tree .
+
+Turbolinks.enableProgressBar();

@@ -1,0 +1,16 @@
+#peek {
+}
+
+.peek-rblineprof-modal {
+  width: 1200px;
+  position: absolute;
+  z-index: 10000;
+  left: 50%;
+  top: 50px;
+  margin-left: -600px;
+}
+
+.peek-rblineprof-file pre.duration {
+  float: left;
+  width: 265px;
+}
