@@ -24,6 +24,6 @@ Rails.application.configure do
 
 # Command line options used when running browserify
 #
-  config.browserify_rails.commandline_options = ["--transform reactify --extension=\".jsx\""]
+  config.browserify_rails.commandline_options = "--transform reactify --extension=\".jsx\""
 
 end
