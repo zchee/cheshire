@@ -30,7 +30,7 @@ gem 'pusher'
 
 # Assets
 gem 'browserify-rails', '~> 0.5'
-gem 'coffee-rails'
+# gem 'coffee-rails'
 gem 'hamlit'
 gem 'jade-rails'
 gem 'jbuilder'
