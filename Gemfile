@@ -7,7 +7,6 @@ gem 'responders'
 # Server
 gem 'puma'
 gem 'unicorn-rails'
-gem 'gctools'
 
 # Database
 gem 'pg'
@@ -74,6 +73,7 @@ gem 'slim'
 
 # Performance
 gem 'bugsnag'
+gem 'gctools'
 gem 'newrelic-faraday'
 gem 'newrelic-redis'
 gem 'newrelic_rpm'

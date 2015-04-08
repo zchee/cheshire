@@ -3,6 +3,7 @@
 
 React = require('react');
 
+// dex sample
 // put components here
 DemoComponent = require('./components/DemoComponent');
 Container = require('./components/Container');
